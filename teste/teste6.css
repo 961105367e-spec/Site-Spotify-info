@@ -1,0 +1,43 @@
+body{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+h1,h2{
+  background-color: rgb(0, 0, 0);
+  color: rgb(88, 97, 26);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p
+header{
+  background-image: url(https://cdn.dribbble.com/userupload/32336558/file/original-3583316d1881b1f289931a2b37f3980e.gif);
+  height: 500px;
+  width: ;
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
+
+}
+nav{
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+  background-color: #0f0f0f;
+}
+nav a::after{
+  content: " ";
+  width: 0%;
+  height: 4px;
+  background-color: #17862f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0,5 ease-in-out;
+}
+
+
+nav a:hover::after{
+  width: 100%;
+}

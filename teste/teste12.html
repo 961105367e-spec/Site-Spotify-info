@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="teste12.css">
+</head>
+<body>
+  <h1 id="letra">Coloque sua imagem:</h1>
+
+<input type="text" id="linkImagem" placeholder="Link da imagem"><br><br>
+<input type="number" id="largura" placeholder="Largura (px)"><br><br>
+<input type="number" id="altura" placeholder="Altura (px)"><br><br>
+
+<button id="mostrar">Mostrar imagem</button>
+
+<hr>
+
+<img id="imagem"
+  src="https://akamai.sscdn.co/uploadfile/letras/fotos/2/0/6/8/206866ab23ac23107de98402db621050.jpg"
+  alt="" style="display:none;">
+
+<script>
+  let botao = document.getElementById("mostrar");
+
+  botao.onclick = function () {
+    let link = document.getElementById("linkImagem").value;
+    let largura = document.getElementById("largura").value;
+    let altura = document.getElementById("altura").value;
+    let img = document.getElementById("imagem");
+
+    img.src = link;
+
+    if (largura) img.style.width = largura + "px";
+    if (altura) img.style.height = altura + "px";
+
+    img.style.display = "block";
+      imagem.src = img.value
+      imagem.widht = largura.value ? number(larura.value); 500 ; imagem.naturalwidht
+      imagem.height = altura.value ? number(altura.value); 300 ; imagem.naturalheight
+};  
+</script>
+</body>
+</html>

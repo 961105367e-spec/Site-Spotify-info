@@ -1,0 +1,125 @@
+body{
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to left, #252525, rgb(0, 0, 0));
+  color: #fff;
+  font-family: Arial, sans-serif;
+
+  
+  
+}
+h1,h2, #galeria{
+  text-align-last: center;
+  colr: #66cc66"
+}
+h1{
+  background-color: #0f0f0f;
+  color: #d9d9d9;
+}
+h2{
+  background-color: #0f0f0f;
+  color: #d9d9d9;
+}
+form{
+  width:fit-content;
+  margin: 40px auto;
+  padding: 35px;
+  border:10px dotted #17862f;
+  border-style: inset ;
+  border-width: 10px;
+
+}
+header{
+  flex: auto;
+  background-image: url(https://cdn.dribbble.com/userupload/32336558/file/original-3583316d1881b1f289931a2b37f3980e.gif);
+  height: 500px;
+  width: ;
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
+
+}
+#streaming img{
+  float: left;
+}
+article{
+  overflow: auto;
+}
+.centralizartag{
+  width: fit-content;
+  margin: auto auto;
+
+}
+.container-principal{
+  display: flex;
+  flex-direction: row;
+}
+aside{
+  width: fit-content;
+  margin-top: 20px;
+  padding: 30px;
+  background-color: #1a1a1a;
+  border-style: groove;
+  border-color: #252525;
+  border-width: 18px;
+  border-radius: 30px;
+}
+section{
+  flex: 1;
+}
+.formatarform{
+  background-image: linear-gradient(to right, rgb(248, 142, 142), rgb(198, 248, 198));
+  color: black;
+  width: fit-content;
+  margin: 0px auto;
+  padding: 20px;
+  border-style: ridge groove;
+  border-width: 10px;
+  border-color: red green blue orange;
+}
+article{
+  overflow: auto;
+}
+header, aside,nav,aside,section,footer{
+  margin-top: 10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 30px;
+  padding: 5px;
+}
+aside{
+  padding-top: 20px;
+  width: fit-content;
+  background-color: rgb(52, 52, 52);
+}
+section{
+  flex: 1;
+  margin-left: 18px;
+}
+aside a{
+  width: 150px;
+}
+nav{
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+  background-color: #0f0f0f;
+}
+nav a::after{
+  content: " ";
+  width: 0%;
+  height: 4px;
+  background-color: #17862f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0,5 ease-in-out;
+}
+
+
+nav a:hover::after{
+  width: 100%;
+}

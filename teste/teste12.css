@@ -1,0 +1,14 @@
+body{
+  background-color: rgb(2, 49, 90);
+  color: rgb(88, 95, 100);
+  text-align: center;
+}
+input {
+  width: 10%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px dashed rgb(2, 49, 90);
+  text-align: center;
+  color: white;              
+  background-color: transparent

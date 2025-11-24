@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de border-style</title>
+  <style>
+    p {
+      border-width: 4px;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    p.dotted  { border-style: dotted; }
+    p.dashed  { border-style: dashed; }
+    p.solid   { border-style: solid; }
+    p.double  { border-style: double; }
+    p.groove  { border-style: groove; }
+    p.ridge   { border-style: ridge; }
+    p.inset   { border-style: inset; }
+    p.outset  { border-style: outset; }
+    p.none    { border-style: none; }
+    p.hidden  { border-style: hidden; }
+    p.mix     { border-style: dotted dashed solid double; }
+  </style>
+</head>
+<body>
+
+  <h2>Exemplos de border-style</h2>
+
+  <p class="dotted">Borda com estilo <strong>dotted</strong></p>
+  <p class="dashed">Borda com estilo <strong>dashed</strong></p>
+  <p class="solid">Borda com estilo <strong>solid</strong></p>
+  <p class="double">Borda com estilo <strong>double</strong></p>
+  <p class="groove">Borda com estilo <strong>groove</strong></p>
+  <p class="ridge">Borda com estilo <strong>ridge</strong></p>
+  <p class="inset">Borda com estilo <strong>inset</strong></p>
+  <p class="outset">Borda com estilo <strong>outset</strong></p>
+  <p class="none">Borda com estilo <strong>none</strong> (sem borda)</p>
+  <p class="hidden">Borda com estilo <strong>hidden</strong> (oculta)</p>
+  <p class="mix">Borda com estilo <strong>misto</strong> (top: dotted, right: dashed, bottom: solid, left: double)</p>
+
+</body>
+</html>

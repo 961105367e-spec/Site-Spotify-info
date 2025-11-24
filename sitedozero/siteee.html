@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="siteee.js" defer></script>
+</head>
+
+</html>
+<body>
+  <div class="bg-animation"></div>
+  <div class="particles" id="particles"></div>
+
+  <header>
+      <div class="logo">
+      </div>
+      <h1>Spotify</h1>
+      <p class="subtitle">Tudo sobre o Spotify</p>
+  </header>
+  
+<nav class="btn-login-final">
+    <a href="cadastro.html" class="btn-login-final">Login</a>
+</nav>
+
+  <div class="container">
+    <div class="card" id="Criação">
+        <h3>Criação do Spotify</h3>
+        <p>Fundado em 23 de abril de 2006 em Estocolmo...</p>
+        <a href="c.html" class="btn">Saiba Mais</a>
+    </div>
+    
+    <div class="card" id="desenvolvimento">
+        <h3>Desenvolvimento Completo</h3>
+        <p>2006: Fundação → 2007: Player P2P...</p>
+        <a href="desenvolvimento.html" class="btn">Ver Linha do Tempo</a>
+    </div>
+    
+    <div class="card" id="pirataria">
+        <h3>Combate à Pirataria</h3>
+        <p>Modelo Freemium + velocidade...</p>
+        <a href="pirataria.html" class="btn">Estratégia</a>
+    </div>
+    
+    <div class="card" id="diferenciais">
+        <h3>Diferenciais Únicos</h3>
+        <p>Discover Weekly, Spotify Wrapped...</p>
+        <a href="diferenciais.html" class="btn">Recursos</a>
+    </div>
+    
+    <div class="card" id="entrega">
+        <h3>O que Entrega Hoje</h3>
+        <p>+100M músicas, +5M podcasts...</p>
+        <a href="entrega.html" class="btn">Planos</a>
+    </div>
+  </div>
+  
+  <footer>
+      <p> 2025 Spotify informacoes  </p>
+      <p>Efeitos visuais interativos | Baseado em dados públicos</p>
+        <a href="">volttar ao inicio</a>
+  </footer>
+ <script>
+  
+  const particlesContainer = document.getElementById('particles');
+      const particleCount = 70;
+
+      function createParticle() {
+          const particle = document.createElement('div');
+          particle.classList.add('particle');
+          
+          const startX = Math.random() * window.innerWidth;
+          particle.style.left = `${startX}px`;
+          
+          const duration = 7 + Math.random() * 10;
+          const drift = (Math.random() - 0.5) * 180;
+          particle.style.setProperty('--drift', `${drift}px`);
+          particle.style.animationDuration = `${duration}s`;
+          particle.style.animationDelay = `${Math.random() * 5}s`;
+          
+          const size = 2 + Math.random() * 3;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          
+          particlesContainer.appendChild(particle);
+          
+          setTimeout(() => {
+              particle.remove();
+          }, duration * 1000 + 1000);
+      }
+
+      setInterval(createParticle, 350);
+      for (let i = 0; i < particleCount; i++) {
+          setTimeout(createParticle, i * 60);
+      }
+
+      document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href') || '';
+
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+
+        targetElement.style.transform = 'scale(1.05)';
+        setTimeout(() => {
+          targetElement.style.transform = '';
+        }, 300);
+      }
+    }
+
+      window.addEventListener('scroll', () => {
+          const scrolled = window.pageYOffset;
+          const parallax = document.querySelector('h1');
+          const speed = scrolled * 0.4;
+          parallax.style.transform = `translateY(${speed}px)`;
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.style.animationPlayState = 'running';
+              }
+          });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.card').forEach(card => {
+          card.style.animationPlayState = 'paused';
+          observer.observe(card);
+      });
+</script>
